@@ -27,6 +27,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
         String tmpLog="";
         String tmpPas="";
         Boolean newUser = false;
+        out.print("test");
 
         for(User u: users) {
             if(u.getLogin()!= request.getParameter("login")) {
@@ -45,6 +46,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
             users.add(new User(tmpLog, tmpPas));
         }
         out.print("</body></html>");
+        //response.sendRedirect("http://localhost:8080/OrderServlet");
     }
 
 
