@@ -6,12 +6,10 @@ import java.io.Serializable;
 public class Car {
     public String model;
     public String color;
-    public double engine;
 
-    public Car(String model, String color, double engine) {
+    public Car(String model, String color) {
         this.model = model;
         this.color = color;
-        this.engine = engine;
     }
 
     public String getModel() {
@@ -28,13 +26,5 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public double getEngine() {
-        return engine;
-    }
-
-    public void setEngine(double engine) {
-        this.engine = engine;
     }
 }

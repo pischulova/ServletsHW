@@ -10,7 +10,7 @@ public class Order {
     public String getDataForWeb() {
         String s="";
         for(Car c: order) {
-            s += "<tr><td>"+ c.getModel() +" </td><td>"+ c.getColor()+" </td><td>"+ c.getEngine()+" </td></tr>";
+            s += "<tr><td>"+ c.getModel() +" </td><td>"+ c.getColor()+" </td></tr>";
         }
         return s;
     }
