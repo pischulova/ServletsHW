@@ -1,6 +1,7 @@
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.*;
+import java.sql.*;
 import java.util.*;
 
 /**
@@ -11,9 +12,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        users.add(new User("user1", "p1"));
-        users.add(new User("user2", "p2"));
-        users.add(new User("user3", "p3"));
+
     }
 
     @Override
@@ -27,7 +26,17 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
         out.print("<html><head><title>Page2</title></head><body>");
         Boolean userFound = false;
         User tmpUser = new User("", "");
-        out.print("test</br>");
+
+
+        try {
+            Connection con = null;
+            con = DriverManager.getConnection("jdbc:derby:C:\\Users\\Алена\\IdeaProjects\\ServletsHW\\db");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM USERS WHERE LOGIN=");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
         for(User u: users) {
             if((u.getLogin()).equals(request.getParameter("login"))) {

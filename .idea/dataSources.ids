@@ -20,7 +20,7 @@
       <column name="ORDER_ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="CAR_MODEL" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
       <column name="CAR_COLOR" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12"/>
-      <column name="USER_LOGIN" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="PRICE" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
       <primary-key name="SQL140225233518320" columns="ORDER_ID"/>
     </table>
     <table name="USERS" schema="APP" catalog="" type="TABLE">

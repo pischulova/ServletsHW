@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3562355089">
+  <component name="DataSourceManagerImpl" format="xml" hash="4073642322">
     <data-source source="LOCAL" name="Derby - Users" uuid="68a78739-83c6-4d9d-8762-6590c964bf5e">
       <driver-ref>derby.embedded</driver-ref>
       <synchronize>true</synchronize>
