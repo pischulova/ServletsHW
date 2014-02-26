@@ -28,16 +28,6 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
         User tmpUser = new User("", "");
 
 
-        try {
-            Connection con = null;
-            con = DriverManager.getConnection("jdbc:derby:C:\\Users\\Алена\\IdeaProjects\\ServletsHW\\db");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM USERS WHERE LOGIN=");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
         for(User u: users) {
             if((u.getLogin()).equals(request.getParameter("login"))) {
                 tmpUser = u;
