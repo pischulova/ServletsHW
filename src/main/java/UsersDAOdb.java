@@ -7,6 +7,9 @@ public class UsersDAOdb implements UsersDAO {
     public Connection con;
     private PreparedStatement stmt;
 
+    public UsersDAOdb(Connection con) {
+        this.con = con;
+    }
 
     @Override
     public boolean addUser(String login, String password) {
