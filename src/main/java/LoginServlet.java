@@ -12,7 +12,9 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
 
     @Override
     public void init() throws ServletException {
-
+        users.add(new User("user1", "p1"));
+        users.add(new User("user2", "p2"));
+        users.add(new User("user3", "p3"));
     }
 
     @Override
@@ -25,49 +27,34 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
         PrintWriter out = response.getWriter();
         out.print("<html><head><title>Page2</title></head><body>");
         Boolean userFound = false;
-        User tmpUser = new User("", "");
-        Connection con=null;
+        User tmpUser = null;
+        HttpSession session;
 
-        try {
-            con = DriverManager.getConnection("jdbc:derby:C:\\Users\\Алена\\IdeaProjects\\ServletsHW\\db");
-        } catch (SQLException e) {
-            e.printStackTrace();
+        for(User u: users) {
+            if((u.getLogin()).equals(request.getParameter("login"))) {
+                tmpUser = u;
+                userFound = true;
+                break;
+            }
         }
 
-        if(con!=null) {
-            UsersDAOdb dao = new UsersDAOdb(con);
-
-            try {
-                tmpUser = dao.checkUser(request.getParameter("login"));
-                if(tmpUser!=null) {
-                    userFound = true;
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-
-            if(userFound) {
-                if((tmpUser.getPassword()).equals(request.getParameter("password"))) {
-                    out.print("Hello, "+ tmpUser.getLogin()+ "!</br>");
-                } else {
-                    out.print("Access denied</br>");
-                }
-
+        if(userFound) {
+            if((tmpUser.getPassword()).equals(request.getParameter("password"))) {
+                session= request.getSession(true);
+                session.setAttribute("user", tmpUser);
             } else {
-                dao.addUser(request.getParameter("login"), request.getParameter("password"));
-                out.print("Welcome to our site, "+ request.getParameter("login") + "!</br>");
+                out.print("Access denied</br>");
             }
-            out.print("</body></html>");
-            response.sendRedirect("http://localhost:8080/order");
 
-            try {
-                con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }  else
-            out.print("null connection");
+        } else {
+            tmpUser = new User(request.getParameter("login"), request.getParameter("password"));
+            users.add(tmpUser);
+            session= request.getSession(true);
+            session.setAttribute("user", tmpUser);
+        }
 
+        out.print("</body></html>");
+        response.sendRedirect("http://localhost:8080/order");
     }
+
 }
