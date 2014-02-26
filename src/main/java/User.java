@@ -19,6 +19,8 @@ public class User {
         return password;
     }
 
+    public Order getOrder() { return order; }
+
     public void setLogin(String login) {
         this.login = login;
     }
