@@ -1,5 +1,6 @@
 <html>
 <body>
+<% request.getSession(false); %>
 <h1>Sign in, please</h1>
 <h2><form name="input" action="/path" method="POST">
     Login:<input type="text" name="login"><br/>

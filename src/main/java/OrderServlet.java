@@ -11,7 +11,12 @@ import java.io.PrintWriter;
  */
 public class OrderServlet extends javax.servlet.http.HttpServlet {
     User user;
-    Order order=null;
+    Order order;
+
+    @Override
+    public void init() throws ServletException {
+        order = new Order();
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -19,7 +24,22 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
         out.print("<html><head><title>Orders</title></head><body>");
         HttpSession session = request.getSession();
         user = (User)session.getAttribute("user");
-        out.print("Hello, "+ user.getLogin() + "</br>");
+        out.print("Hello, "+ user.getLogin() + "!</br>");
+
+        String mod = request.getParameter("model");
+        String col = request.getParameter("color");
+        if(mod!=null && col!=null) {
+            if(order==null) {
+                order = new Order();
+                order.addToOrder(new Car(mod, col));
+                user.setOrder(order);
+            } else {
+                order.addToOrder(new Car(mod, col));
+                user.setOrder(order);
+            }
+
+        }
+
         out.print("<H2>Your previous orders:</H2>");
 
         order = user.getOrder();
@@ -29,9 +49,12 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
             out.print(user.getOrder().getDataForWeb());
         }
 
+        session.setAttribute("user", user);
         out.print("<H2>Make a new order</H2>");
-        out.print("<form action=\"\"> <input type=\"text\" name=\"Choose your car model:\"/><br/> <input type=\"password" +
-                "name=\"Choose your car color\"/><br/> <input type=\"submit\" name=\"Buy!\"/><br/></form>");
+        out.print("<form action=\"/order\" method=\"GET\"> Choose model:<input type=\"text\" name=\"model\"/><br/> Choose color:<input type=\"text\"" +
+                "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");
+
+        out.print("<form action=\"/index.jsp\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");
         out.print("</body></html>");
     }
 

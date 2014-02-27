@@ -29,5 +29,7 @@ public class User {
         this.password = password;
     }
 
-
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 }
