@@ -20,41 +20,46 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        out.print("<html><head><title>Orders</title></head><body>");
         HttpSession session = request.getSession();
-        user = (User)session.getAttribute("user");
-        out.print("Hello, "+ user.getLogin() + "!</br>");
+        PrintWriter out = response.getWriter();
+        if(session.getAttribute("user")!= null) {
+            out.print("<html><head><title>Orders</title></head><body>");
+            user = (User)session.getAttribute("user");
+            out.print("Hello, "+ user.getLogin() + "!</br>");
 
-        String mod = request.getParameter("model");
-        String col = request.getParameter("color");
-        if(mod!=null && col!=null) {
-            if(order==null) {
-                order = new Order();
-                order.addToOrder(new Car(mod, col));
-                user.setOrder(order);
-            } else {
-                order.addToOrder(new Car(mod, col));
-                user.setOrder(order);
+            String mod = request.getParameter("model");
+            String col = request.getParameter("color");
+            if(mod!=null && col!=null) {
+                if(order==null) {
+                    order = new Order();
+                    order.addToOrder(new Car(mod, col));
+                    user.setOrder(order);
+                } else {
+                    order.addToOrder(new Car(mod, col));
+                    user.setOrder(order);
+                }
+
             }
 
-        }
+            out.print("<H2>Your previous orders:</H2>");
 
-        out.print("<H2>Your previous orders:</H2>");
+            order = user.getOrder();
+            if(order==null) {
+                out.print("You have not made any orders yet.");
+            } else {
+                out.print(user.getOrder().getDataForWeb());
+            }
 
-        order = user.getOrder();
-        if(order==null) {
-            out.print("You have not made any orders yet.");
+            session.setAttribute("user", user);
+            out.print("<H2>Make a new order</H2>");
+            out.print("<form action=\"/order\" method=\"GET\"> Choose model:<input type=\"text\" name=\"model\"/><br/> Choose color:<input type=\"text\"" +
+                    "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");
+
+            out.print("<form action=\"/index.jsp\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");
+
         } else {
-            out.print(user.getOrder().getDataForWeb());
+            out.print("Access denied. Log in first");
         }
-
-        session.setAttribute("user", user);
-        out.print("<H2>Make a new order</H2>");
-        out.print("<form action=\"/order\" method=\"GET\"> Choose model:<input type=\"text\" name=\"model\"/><br/> Choose color:<input type=\"text\"" +
-                "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");
-
-        out.print("<form action=\"/index.jsp\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");
         out.print("</body></html>");
     }
 
