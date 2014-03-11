@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class DerbySingleton {
     private static DerbySingleton ourInstance = new DerbySingleton();
 
-    private static final String UNIT_NAME = "Unit2";
+    private static final String UNIT_NAME = "Unit";
     private static EntityManagerFactory factory;
     private static EntityManager em = null;
 

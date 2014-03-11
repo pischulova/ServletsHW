@@ -8,13 +8,18 @@ import java.util.*;
  * Created by Алена on 21.02.14.
  */
 public class LoginServlet extends javax.servlet.http.HttpServlet {
-    Set<User> users = new HashSet<User>();
+    //Set<User> users = new HashSet<User>();
+    UserDAO userDAO = DAOFactory.getDAOFactory(1).getUserDAO();
 
     @Override
     public void init() throws ServletException {
-        users.add(new User("user1", "p1"));
-        users.add(new User("user2", "p2"));
-        users.add(new User("user3", "p3"));
+
+//        users.add(new User("user1", "p1"));
+//        users.add(new User("user2", "p2"));
+//        users.add(new User("user3", "p3"));
+        userDAO.addUser(new User("user1", "p1"));
+        userDAO.addUser(new User("user2", "p2"));
+        userDAO.addUser(new User("user3", "p3"));
     }
 
     @Override
@@ -26,19 +31,11 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         out.print("<html><head><title>Page2</title></head><body>");
-        Boolean userFound = false;
         User tmpUser = null;
         HttpSession session;
 
-        for(User u: users) {
-            if((u.getLogin()).equals(request.getParameter("login"))) {
-                tmpUser = u;
-                userFound = true;
-                break;
-            }
-        }
-
-        if(userFound) {
+        tmpUser = userDAO.findUser(request.getParameter("login"));
+        if(tmpUser!= null) {
             if((tmpUser.getPassword()).equals(request.getParameter("password"))) {
                 session= request.getSession(true);
                 session.setAttribute("user", tmpUser);
@@ -49,7 +46,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
 
         } else {
             tmpUser = new User(request.getParameter("login"), request.getParameter("password"));
-            users.add(tmpUser);
+            userDAO.addUser(tmpUser);
             session= request.getSession(true);
             session.setAttribute("user", tmpUser);
             response.sendRedirect("http://localhost:8080/order");

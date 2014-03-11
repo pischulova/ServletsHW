@@ -1,4 +1,5 @@
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 /**
  * Created by Алена on 11.03.14.
@@ -20,6 +21,12 @@ public class UserDAOorm implements UserDAO{
     @Override
     public User findUser(int id) {
         return em.find(User.class, id);
+    }
+
+    @Override
+    public User findUser(String login) {
+        Query query = em.createQuery("SELECT c FROM User c WHERE login="+login);
+        return (User)query.getSingleResult();
     }
 
     @Override
