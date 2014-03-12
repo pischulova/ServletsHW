@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d9b5b51-8bb9-4256-9dcb-a043e639f25a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/log/log.ctrl" afterPath="$PROJECT_DIR$/db/log/log.ctrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/log/log1.dat" afterPath="$PROJECT_DIR$/db/log/log1.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/db/log/logmirror.ctrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Order.java" afterPath="$PROJECT_DIR$/src/main/java/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OrderServlet.java" afterPath="$PROJECT_DIR$/src/main/java/OrderServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServletsHW.iml" afterPath="$PROJECT_DIR$/ServletsHW.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/User.java" afterPath="$PROJECT_DIR$/src/main/java/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.lck" afterPath="$PROJECT_DIR$/db/db.lck" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DerbySingleton.java" afterPath="$PROJECT_DIR$/src/main/java/DerbySingleton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ServletsHW.iws" />
@@ -78,7 +71,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="63" selection-start="283" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +108,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="27" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-              <folding />
+              <folding>
+                <element signature="e#278#279#0" expanded="false" />
+                <element signature="e#306#307#0" expanded="false" />
+                <element signature="e#348#349#0" expanded="false" />
+                <element signature="e#382#383#0" expanded="false" />
+                <element signature="e#414#415#0" expanded="false" />
+                <element signature="e#442#443#0" expanded="false" />
+                <element signature="e#484#485#0" expanded="false" />
+                <element signature="e#518#519#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,19 +157,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderServlet.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OrderServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="51" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1207">
+            <state line="62" column="51" selection-start="2439" selection-end="2439" vertical-scroll-proportion="2.2551022" vertical-offset="51" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DerbySingleton.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DerbySingleton.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DerbySingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="459" selection-end="459" vertical-scroll-proportion="0.7015873" vertical-offset="51" max-vertical-offset="476">
+            <state line="10" column="6" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="629">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="115" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -199,10 +214,10 @@
         <option value="$PROJECT_DIR$/src/main/java/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserDAOorm.java" />
         <option value="$PROJECT_DIR$/src/main/java/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DerbySingleton.java" />
         <option value="$PROJECT_DIR$/src/main/java/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/OrderServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DerbySingleton.java" />
       </list>
     </option>
   </component>
@@ -798,7 +813,7 @@
       <workItem from="1393528152494" duration="8530000" />
       <workItem from="1393664875012" duration="1191000" />
       <workItem from="1394564533356" duration="9860000" />
-      <workItem from="1394649844508" duration="4448000" />
+      <workItem from="1394649844508" duration="7589000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1392992935528</created>
@@ -856,11 +871,15 @@
       <created>1394574010211</created>
       <updated>1394574010211</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Initial commit&#10;">
+      <created>1394657190365</created>
+      <updated>1394657190365</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67188000" />
+    <option name="totallyTimeSpent" value="70329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -881,7 +900,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868218" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1930533" sideWeight="0.5708738" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43875968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2992248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -941,7 +960,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="612">
-          <folding />
+          <folding>
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -969,7 +997,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="58" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="986">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,7 +1037,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="612">
-          <folding />
+          <folding>
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,7 +1074,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="58" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="1037">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,7 +1114,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="782">
-          <folding />
+          <folding>
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,7 +1151,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="40" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1020">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,7 +1191,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="782">
-          <folding />
+          <folding>
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,7 +1228,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="8" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1003">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,7 +1268,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="782">
-          <folding />
+          <folding>
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1296,24 +1368,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="115" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="27" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
+          <folding>
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="63" selection-start="283" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1356,16 +1432,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="51" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1207">
+        <state line="11" column="115" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DerbySingleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="459" selection-end="459" vertical-scroll-proportion="0.7015873" vertical-offset="51" max-vertical-offset="476">
+        <state line="10" column="6" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="629">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="51" selection-start="2439" selection-end="2439" vertical-scroll-proportion="2.2551022" vertical-offset="51" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
