@@ -1,7 +1,4 @@
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.io.Serializable;
-import java.util.*;
+import javax.persistence.*;
 
 /**
  * Created by Алена on 21.02.14.
@@ -9,28 +6,39 @@ import java.util.*;
 @Entity
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private List<Car> order = new ArrayList<Car>();
+    //    private List<Car> order = new ArrayList<Car>();
+    public String name;
+    public String color;
+
+    @ManyToOne
+    @JoinColumn(name="UserLogin")
+    private User user;
 
     public Order() {
     }
 
-    public String getDataForWeb() {
-        String s="";
-        for(Car c: order) {
-            s += "<tr><td>"+ c.getModel() +" </td><td>"+ c.getColor()+" </td></tr></br>";
-        }
-        return s;
+    public Order(String color, String name) {
+        this.color = color;
+        this.name = name;
     }
 
-    public void addToOrder (Car car) {
-        order.add(car);
+    public String getName() {
+        return name;
     }
 
-    public int getSize() {
-        return order.size();
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 
     public int getId() {
         return id;
@@ -39,4 +47,22 @@ public class Order {
     public void setId(int id) {
         this.id = id;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
+//    public void addToOrder (Car car) {
+//        order.add(car);
+//    }
+//
+//    public int getSize() {
+//        return order.size();
+//    }
+
 }
