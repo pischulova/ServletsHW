@@ -1,4 +1,3 @@
-import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +10,7 @@ import java.util.Collection;
  * Created by Алена on 21.02.14.
  */
 public class OrderServlet extends javax.servlet.http.HttpServlet {
-    User user;
+    Users users;
     Order order;
     OrderDAO orderDAO = DAOFactory.getDAOFactory(1).getOrderDAO();
 
@@ -25,10 +24,10 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
-        if(session.getAttribute("user")!= null) {
+        if(session.getAttribute("users")!= null) {
             out.print("<html><head><title>Orders</title></head><body>");
-            user = (User)session.getAttribute("user");
-            out.print("Hello, "+ user.getLogin() + "!</br>");
+            users = (Users)session.getAttribute("users");
+            out.print("Hello, "+ users.getLogin() + "!</br>");
 
             String name = request.getParameter("name");
             String col = request.getParameter("color");
@@ -36,23 +35,23 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
                 if(order==null) {
                     order = new Order();
                     orderDAO.addOrder(new Order(name, col));
-                    user.addToOrder(order);
+                    users.addToOrder(order);
                 } else {
                     orderDAO.addOrder(new Order(name, col));
-                    user.addToOrder(order);
+                    users.addToOrder(order);
                 }
             }
 
             out.print("<H2>Your previous orders:</H2>");
 
-            Collection<Order> orders = user.getOrders();
+            Collection<Order> orders = users.getOrders();
             if(orders==null) {
                 out.print("You have not made any orders yet.");
             } else {
-                out.print(user.getOrdersForWeb());
+                out.print(users.getOrdersForWeb());
             }
 
-            session.setAttribute("user", user);
+            session.setAttribute("users", users);
             out.print("<H2>Make a new order</H2>");
             out.print("<form action=\"/order\" method=\"GET\"> Choose product:<input type=\"text\" name=\"name\"/><br/> Choose color:<input type=\"text\"" +
                     "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");

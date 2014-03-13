@@ -16,6 +16,11 @@
     <schema name="SYSIBM" catalog=""/>
     <schema name="SYSPROC" catalog=""/>
     <schema name="SYSSTAT" catalog=""/>
+    <table name="USERS" schema="APP" catalog="" type="TABLE">
+      <column name="LOGIN" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SQL140313231810690" columns="LOGIN"/>
+    </table>
     <table name="SYSALIASES" schema="SYS" catalog="" type="SYSTEM TABLE">
       <column name="ALIASID" sqlType="CHAR" length="36" precision="0" nullable="false" jdbcType="1"/>
       <column name="ALIAS" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12"/>

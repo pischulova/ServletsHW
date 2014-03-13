@@ -4,6 +4,7 @@ import javax.persistence.*;
  * Created by Алена on 21.02.14.
  */
 @Entity
+@Table(name = "Order")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +15,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name="UserLogin")
-    private User user;
+    private Users users;
 
     public Order() {
     }
@@ -48,12 +49,12 @@ public class Order {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 
 

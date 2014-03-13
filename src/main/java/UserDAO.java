@@ -3,10 +3,10 @@
  */
 public interface UserDAO {
 
-    public void addUser(User user);
-    public User findUser(int id);
-    public User findUser(String login);
-    public void removeUser(User user);
-    public User updateUser(User user);
+    public void addUser(Users users);
+    public Users findUser(int id);
+    public Users findUser(String login);
+    public void removeUser(Users users);
+    public Users updateUser(Users users);
 
 }

@@ -4,7 +4,7 @@
     <persistence-unit name="Unit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>Order</class>
-        <class>User</class>
+        <class>Users</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenSevenDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>

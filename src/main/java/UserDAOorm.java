@@ -1,4 +1,5 @@
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 /**
@@ -12,34 +13,40 @@ public class UserDAOorm implements UserDAO{
     }
 
     @Override
-    public void addUser(User user) {
+    public void addUser(Users users) {
         em.getTransaction().begin();
-        em.persist(user);
+        em.persist(users);
         em.getTransaction().commit();
     }
 
     @Override
-    public User findUser(int id) {
-        return em.find(User.class, id);
+    public Users findUser(int id) {
+        return em.find(Users.class, id);
     }
 
     @Override
-    public User findUser(String login) {
-        Query query = em.createQuery("SELECT c FROM User c WHERE login="+login);
-        return (User)query.getSingleResult();
+    public Users findUser(String login) {
+        Users u = new Users();
+        try{
+            Query query = em.createQuery("SELECT c FROM Users c WHERE login='"+login+"'");
+        u = (Users)query.getSingleResult();}
+        catch (NoResultException noResultException) {}
+        finally {
+            return u;
+        }
     }
 
     @Override
-    public void removeUser(User user) {
+    public void removeUser(Users users) {
         em.getTransaction().begin();
-        em.remove(user);
+        em.remove(users);
         em.getTransaction().commit();
     }
 
     @Override
-    public User updateUser(User user) {
+    public Users updateUser(Users users) {
         em.getTransaction().begin();
-        em.merge(user);
+        em.merge(users);
         em.getTransaction().commit();
         return null;
     }

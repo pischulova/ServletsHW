@@ -5,20 +5,21 @@ import java.util.Collection;
  * Created by Алена on 21.02.14.
  */
 @Entity
-public class User {
+@Table
+public class Users {
     @Id
     private String login;
     private String password;
 
-    @OneToMany(mappedBy="user")
+    @OneToMany(mappedBy="users")
     private Collection <Order> orders;
 
-    public User(String login, String password) {
+    public Users(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    public User() {
+    public Users() {
     }
 
     public String getLogin() {
