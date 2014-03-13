@@ -17,9 +17,9 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
 //        users.add(new User("user1", "p1"));
 //        users.add(new User("user2", "p2"));
 //        users.add(new User("user3", "p3"));
-        userDAO.addUser(new User("user1", "p1"));
-        userDAO.addUser(new User("user2", "p2"));
-        userDAO.addUser(new User("user3", "p3"));
+//        userDAO.addUser(new User("user1", "p1"));
+//        userDAO.addUser(new User("user2", "p2"));
+//        userDAO.addUser(new User("user3", "p3"));
     }
 
     @Override
