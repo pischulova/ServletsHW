@@ -28,7 +28,7 @@
       <column name="USERID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
       <column name="LOGIN" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="PASSWORD" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SQL140315190855940" columns="USERID"/>
+      <primary-key name="SQL140315191630140" columns="USERID"/>
       <exported-key name="FK_ORDERS_USERID" table="ORDERS" schema="APP" catalog="" columns="USERID"/>
     </table>
     <table name="SYSALIASES" schema="SYS" catalog="" type="SYSTEM TABLE">

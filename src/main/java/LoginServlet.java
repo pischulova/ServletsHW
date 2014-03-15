@@ -10,19 +10,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
     UserDAO userDAO = DAOFactory.getDAOFactory(1).getUserDAO();
 
     @Override
-    public void init() throws ServletException {
-
-//        users.add(new Users("user1", "p1"));
-//        users.add(new Users("user2", "p2"));
-//        users.add(new Users("user3", "p3"));
-        userDAO.addUser(new Users("user1", "p1"));
-        userDAO.addUser(new Users("user2", "p2"));
-        userDAO.addUser(new Users("user3", "p3"));
-    }
-
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 
     @Override

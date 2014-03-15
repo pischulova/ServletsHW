@@ -36,13 +36,12 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
                 users.addToOrder(orders);
                 orders.setUsers(users);
                 orderDAO.addOrder(orders);
-
             }
 
             out.print("<H2>Your previous orders:</H2>");
 
             Collection<Orders> ordersList = users.getOrdersList();
-            if(ordersList==null) {
+            if(ordersList.size()==0) {
                 out.print("You have not made any orders yet.");
             } else {
                 out.print("<table>"+users.getOrdersForWeb()+"</table>");
@@ -55,9 +54,10 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
                     "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");
 
             out.print("<form action=\"/index.jsp\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");
-
+            session.setAttribute("user", users);
         } else {
             out.print("Access denied. You have to log in first");
+
         }
         out.print("</body></html>");
     }

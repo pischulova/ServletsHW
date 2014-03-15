@@ -25,9 +25,9 @@
             <property name="eclipselink.jdbc.url" value="jdbc:derby:C:/Users/Алена/IdeaProjects/ServletsHW/db"/>
             <property name="eclipselink.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
             <property name="eclipselink.jdbc.user" value=""/>
-            <property name="eclipselink.jdbc.password" value=""/>
+            <property name="eclipselink.jdbc.password" value="update"/>
 
-            <property name="eclipselink.ddl-generation" value="update"/>
+            <property name="eclipselink.ddl-generation" value=""/>
             <property name="eclipselink.ddl-generation.output-mode" value="database"/>
         </properties>
     </persistence-unit>
