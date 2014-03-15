@@ -3,9 +3,9 @@
  */
 public interface OrderDAO {
 
-    public void addOrder(Order order);
-    public Order findOrder(int id);
-    public void removeOrder(Order order);
-    public Order updateOrder(Order order);
+    public void addOrder(Orders orders);
+    public Orders findOrder(int id);
+    public void removeOrder(Orders orders);
+    public Orders updateOrder(Orders orders);
 
 }

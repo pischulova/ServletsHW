@@ -16,10 +16,20 @@
     <schema name="SYSIBM" catalog=""/>
     <schema name="SYSPROC" catalog=""/>
     <schema name="SYSSTAT" catalog=""/>
+    <table name="ORDERS" schema="APP" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
+      <column name="COLOR" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="USERID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="SQL140315191629940" columns="ID"/>
+      <foreign-key name="FK_ORDERS_USERID" columns="USERID" ref-table="USERS" ref-schema="APP" ref-catalog="" ref-columns="USERID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
     <table name="USERS" schema="APP" catalog="" type="TABLE">
-      <column name="LOGIN" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="USERID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
+      <column name="LOGIN" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="PASSWORD" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SQL140313231810690" columns="LOGIN"/>
+      <primary-key name="SQL140315190855940" columns="USERID"/>
+      <exported-key name="FK_ORDERS_USERID" table="ORDERS" schema="APP" catalog="" columns="USERID"/>
     </table>
     <table name="SYSALIASES" schema="SYS" catalog="" type="SYSTEM TABLE">
       <column name="ALIASID" sqlType="CHAR" length="36" precision="0" nullable="false" jdbcType="1"/>
@@ -684,7 +694,7 @@
       </prototype>
     </procedure>
   </data-source>
-  <data-source source="LOCAL" name="Unit1" uuid="1d21f570-c4cb-4a34-8b5f-67323925dc9a">
+  <data-source source="LOCAL" name="Unit" uuid="09a0afe3-8d94-4db1-a894-98bf18790a81">
     <database-info product="Apache Derby" version="10.10.1.1 - (1458268)" jdbc-version="4.1" driver-name="Apache Derby Embedded JDBC Driver" driver-version="10.10.1.1 - (1458268)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
@@ -700,19 +710,11 @@
     <schema name="SYSIBM" catalog=""/>
     <schema name="SYSPROC" catalog=""/>
     <schema name="SYSSTAT" catalog=""/>
-    <table name="BOOK" schema="APP" catalog="" type="TABLE">
-      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
-      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="STUDENTID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <primary-key name="SQL140302152909750" columns="ID"/>
-      <foreign-key name="FK_90IYSRRV1A4J69KC0U9DFC6M7" columns="STUDENTID" ref-table="STUDENT" ref-schema="APP" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
-    </table>
-    <table name="STUDENT" schema="APP" catalog="" type="TABLE">
-      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
-      <column name="GRADE" sqlType="DOUBLE" length="52" precision="0" nullable="false" jdbcType="8"/>
-      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SQL140302152909900" columns="ID"/>
-      <exported-key name="FK_90IYSRRV1A4J69KC0U9DFC6M7" table="BOOK" schema="APP" catalog="" columns="STUDENTID"/>
+    <table name="USERS" schema="APP" catalog="" type="TABLE">
+      <column name="USERID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
+      <column name="LOGIN" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SQL140315190855940" columns="USERID"/>
     </table>
     <table name="SYSALIASES" schema="SYS" catalog="" type="SYSTEM TABLE">
       <column name="ALIASID" sqlType="CHAR" length="36" precision="0" nullable="false" jdbcType="1"/>
@@ -937,6 +939,13 @@
       <index name="SYSTRIGGERS_INDEX2" unique="true" columns="TRIGGERNAME,SCHEMAID"/>
       <index name="SYSTRIGGERS_INDEX3" unique="false" columns="TABLEID,CREATIONTIMESTAMP"/>
     </table>
+    <table name="SYSUSERS" schema="SYS" catalog="" type="SYSTEM TABLE">
+      <column name="USERNAME" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12"/>
+      <column name="HASHINGSCHEME" sqlType="VARCHAR" length="32672" precision="0" nullable="false" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR" length="32672" precision="0" nullable="false" jdbcType="12"/>
+      <column name="LASTMODIFIED" sqlType="TIMESTAMP" length="29" precision="9" nullable="false" jdbcType="93"/>
+      <index name="SYSUSERS_INDEX1" unique="true" columns="USERNAME"/>
+    </table>
     <table name="SYSVIEWS" schema="SYS" catalog="" type="SYSTEM TABLE">
       <column name="TABLEID" sqlType="CHAR" length="36" precision="0" nullable="false" jdbcType="1"/>
       <column name="VIEWDEFINITION" sqlType="LONG VARCHAR" length="32700" precision="0" nullable="false" jdbcType="-1"/>
@@ -1004,9 +1013,27 @@
         <parameter name="SEQUENTIAL" sqlType="SMALLINT" length="2" precision="5" nullable="true" jdbcType="5" type="1" index="3"/>
       </prototype>
     </procedure>
+    <procedure name="SYSCS_CREATE_USER" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfQ1JFQVRFX1VTRVI=">
+      <prototype>
+        <parameter name="userName" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="password" sqlType="VARCHAR" length="65344" precision="32672" nullable="true" jdbcType="12" type="1" index="2"/>
+      </prototype>
+    </procedure>
     <procedure name="SYSCS_DISABLE_LOG_ARCHIVE_MODE" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfRElTQUJMRV9MT0dfQVJDSElWRV9NT0RF">
       <prototype>
         <parameter name="DELETE_ARCHIVED_LOG_FILES" sqlType="SMALLINT" length="2" precision="5" nullable="true" jdbcType="5" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="SYSCS_DROP_STATISTICS" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfRFJPUF9TVEFUSVNUSUNT">
+      <prototype>
+        <parameter name="SCHEMANAME" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="TABLENAME" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="INDEXNAME" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="3"/>
+      </prototype>
+    </procedure>
+    <procedure name="SYSCS_DROP_USER" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfRFJPUF9VU0VS">
+      <prototype>
+        <parameter name="userName" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="1"/>
       </prototype>
     </procedure>
     <procedure name="SYSCS_EMPTY_STATEMENT_CACHE" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfRU1QVFlfU1RBVEVNRU5UX0NBQ0hF"/>
@@ -1108,7 +1135,26 @@
         <parameter name="TRUNCATE_END" sqlType="SMALLINT" length="2" precision="5" nullable="true" jdbcType="5" type="1" index="5"/>
       </prototype>
     </procedure>
+    <procedure name="SYSCS_INVALIDATE_STORED_STATEMENTS" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfSU5WQUxJREFURV9TVE9SRURfU1RBVEVNRU5UUw=="/>
+    <procedure name="SYSCS_MODIFY_PASSWORD" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfTU9ESUZZX1BBU1NXT1JE">
+      <prototype>
+        <parameter name="password" sqlType="VARCHAR" length="65344" precision="32672" nullable="true" jdbcType="12" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="SYSCS_REGISTER_TOOL" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLkphdmE1U3lzdGVtUHJvY2VkdXJlcy5TWVNDU19SRUdJU1RFUl9UT09M">
+      <prototype>
+        <parameter name="toolName" sqlType="VARCHAR" length="65344" precision="32672" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="register" sqlType="BOOLEAN" length="1" precision="1" nullable="true" jdbcType="16" type="1" index="2"/>
+        <parameter name="optionalArgs" sqlType="VARCHAR" length="65344" precision="32672" nullable="true" jdbcType="12" type="1" index="3"/>
+      </prototype>
+    </procedure>
     <procedure name="SYSCS_RELOAD_SECURITY_POLICY" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfUkVMT0FEX1NFQ1VSSVRZX1BPTElDWQ=="/>
+    <procedure name="SYSCS_RESET_PASSWORD" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfUkVTRVRfUEFTU1dPUkQ=">
+      <prototype>
+        <parameter name="userName" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="password" sqlType="VARCHAR" length="65344" precision="32672" nullable="true" jdbcType="12" type="1" index="2"/>
+      </prototype>
+    </procedure>
     <procedure name="SYSCS_SET_DATABASE_PROPERTY" schema="SYSCS_UTIL" catalog="" type="1" remarks="b3JnLmFwYWNoZS5kZXJieS5jYXRhbG9nLlN5c3RlbVByb2NlZHVyZXMuU1lTQ1NfU0VUX0RBVEFCQVNFX1BST1BFUlRZ">
       <prototype>
         <parameter name="KEY" sqlType="VARCHAR" length="256" precision="128" nullable="true" jdbcType="12" type="1" index="1"/>

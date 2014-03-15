@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d9b5b51-8bb9-4256-9dcb-a043e639f25a" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Алена\IdeaProjects\ServletsHW\src\main\java\User.java" afterPath="$PROJECT_DIR$/src/main/java/Users.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" />
+      <change type="MOVED" beforePath="C:\Users\Алена\IdeaProjects\ServletsHW\src\main\java\Order.java" afterPath="$PROJECT_DIR$/src/main/java/Orders.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c101.dat" afterPath="$PROJECT_DIR$/db/seg0/c101.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c111.dat" afterPath="$PROJECT_DIR$/db/seg0/c111.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c121.dat" afterPath="$PROJECT_DIR$/db/seg0/c121.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c130.dat" afterPath="$PROJECT_DIR$/db/seg0/c130.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c141.dat" afterPath="$PROJECT_DIR$/db/seg0/c141.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c150.dat" afterPath="$PROJECT_DIR$/db/seg0/c150.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c161.dat" afterPath="$PROJECT_DIR$/db/seg0/c161.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c171.dat" afterPath="$PROJECT_DIR$/db/seg0/c171.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c20.dat" afterPath="$PROJECT_DIR$/db/seg0/c20.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c200.dat" afterPath="$PROJECT_DIR$/db/seg0/c200.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c211.dat" afterPath="$PROJECT_DIR$/db/seg0/c211.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c221.dat" afterPath="$PROJECT_DIR$/db/seg0/c221.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c31.dat" afterPath="$PROJECT_DIR$/db/seg0/c31.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c41.dat" afterPath="$PROJECT_DIR$/db/seg0/c41.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seg0/c51.dat" afterPath="$PROJECT_DIR$/db/seg0/c51.dat" />
@@ -24,13 +33,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/log/log1.dat" afterPath="$PROJECT_DIR$/db/log/log1.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/db/log/logmirror.ctrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/LoginServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Order.java" afterPath="$PROJECT_DIR$/src/main/java/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OrderDAO.java" afterPath="$PROJECT_DIR$/src/main/java/OrderDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OrderDAOorm.java" afterPath="$PROJECT_DIR$/src/main/java/OrderDAOorm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OrderServlet.java" afterPath="$PROJECT_DIR$/src/main/java/OrderServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/UserDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServletsHW.iml" afterPath="$PROJECT_DIR$/ServletsHW.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ServletsHW_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ServletsHW_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserDAOorm.java" afterPath="$PROJECT_DIR$/src/main/java/UserDAOorm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Users.java" afterPath="$PROJECT_DIR$/src/main/java/Users.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.lck" afterPath="$PROJECT_DIR$/db/db.lck" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ServletsHW.iws" />
@@ -103,7 +117,7 @@
       <file leaf-file-name="LoginServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="57" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="45" column="13" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -116,45 +130,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Order.java">
+      <file leaf-file-name="Orders.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Orders.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="29" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+            <state line="17" column="24" selection-start="350" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1275">
               <folding>
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#683#684#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#930#931#0" expanded="true" />
-                <element signature="e#958#959#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#915#916#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="OrderServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="24" selection-start="1081" selection-end="1247" vertical-scroll-proportion="0.58536583" vertical-offset="311" max-vertical-offset="731">
+            <state line="35" column="16" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.42696628" vertical-offset="341" max-vertical-offset="1173">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
+      <file leaf-file-name="APP.ORDERS" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/73e78a30/68a78739-83c6-4d9d-8762-6590c964bf5e/.APP.ORDERS">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDAOorm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/OrderDAOorm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="51" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1207">
+            <state line="15" column="45" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -163,7 +184,18 @@
       <file leaf-file-name="UserDAOorm.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UserDAOorm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="37" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="986">
+            <state line="30" column="70" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="986">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="40" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -172,8 +204,13 @@
       <file leaf-file-name="Users.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-              <folding />
+            <state line="11" column="22" selection-start="215" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="1088">
+              <folding>
+                <element signature="e#1004#1005#0" expanded="true" />
+                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="e#1074#1075#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,7 +218,7 @@
       <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="74" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="374">
+            <state line="29" column="69" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -212,15 +249,16 @@
         <option value="$PROJECT_DIR$/src/main/java/OrderDAOorm.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/OrderServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/DerbySingleton.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="db-console:/73e78a30/68a78739-83c6-4d9d-8762-6590c964bf5e/" />
-        <option value="$PROJECT_DIR$/src/main/java/UserDAOorm.java" />
         <option value="$PROJECT_DIR$/src/main/java/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/UserDAOorm.java" />
+        <option value="db-console:/73e78a30/09a0afe3-8d94-4db1-a894-98bf18790a81/" />
+        <option value="$PROJECT_DIR$/src/main/java/Order.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OrderServlet.java" />
       </list>
     </option>
   </component>
@@ -416,8 +454,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,7 +467,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.IntelliJIdea13/config/jdbc-drivers/derbyclient-10.10.1.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LessonMarch1" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="dynamic.classpath" value="false" />
@@ -817,7 +855,9 @@
       <workItem from="1393664875012" duration="1191000" />
       <workItem from="1394564533356" duration="9860000" />
       <workItem from="1394649844508" duration="7621000" />
-      <workItem from="1394732351907" duration="13929000" />
+      <workItem from="1394732351907" duration="14118000" />
+      <workItem from="1394874757225" duration="2037000" />
+      <workItem from="1394896781224" duration="9670000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1392992935528</created>
@@ -887,15 +927,19 @@
       <created>1394740918691</created>
       <updated>1394740918691</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Initial commit&#10;">
+      <created>1394747000298</created>
+      <updated>1394747000298</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84290000" />
+    <option name="totallyTimeSpent" value="96186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15813954" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -911,9 +955,9 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868218" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19224556" sideWeight="0.5704388" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19224556" sideWeight="0.5704388" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35503876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868218" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868218" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -956,32 +1000,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/DerbySingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="72" selection-start="435" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="935" selection-end="945" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
-          <folding />
-        </state>
+        <state line="7" column="39" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -1005,26 +1026,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Orders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="71" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="391">
           <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1045,9 +1066,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="72" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="289">
-          <folding />
-        </state>
+        <state line="3" column="35" selection-start="72" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="289" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -1071,26 +1090,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Orders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="26" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="391">
           <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1111,9 +1130,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="72" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="289">
-          <folding />
-        </state>
+        <state line="3" column="35" selection-start="72" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="289" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -1137,26 +1154,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Orders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="26" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="391">
           <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1177,9 +1194,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="289">
-          <folding />
-        </state>
+        <state line="5" column="57" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="289" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -1203,26 +1218,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Orders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="26" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="391">
           <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1243,9 +1258,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="289">
-          <folding />
-        </state>
+        <state line="4" column="10" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="289" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DAOFactory.java">
@@ -1257,9 +1270,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="46" selection-end="46" vertical-scroll-proportion="0.05944056" vertical-offset="0" max-vertical-offset="572">
-          <folding />
-        </state>
+        <state line="2" column="32" selection-start="46" selection-end="46" vertical-scroll-proportion="0.05944056" vertical-offset="0" max-vertical-offset="572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DerbyDAOFactory.java">
@@ -1272,13 +1283,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/OrderDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="8" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OrderDAOorm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -1297,13 +1301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="51" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/73e78a30/1d21f570-c4cb-4a34-8b5f-67323925dc9a/.APP.BOOK">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -1311,7 +1308,36 @@
     </entry>
     <entry file="dbDummy://db-console:/73e78a30/68a78739-83c6-4d9d-8762-6590c964bf5e/">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="38" selection-end="38" vertical-scroll-proportion="0.08994709" vertical-offset="0" max-vertical-offset="378">
+        <state line="2" column="16" selection-start="38" selection-end="38" vertical-scroll-proportion="0.08994709" vertical-offset="0" max-vertical-offset="378" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DerbySingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/73e78a30/68a78739-83c6-4d9d-8762-6590c964bf5e/.APP.USERS">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/73e78a30/09a0afe3-8d94-4db1-a894-98bf18790a81/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="47" selection-start="203" selection-end="203" vertical-scroll-proportion="-1.9193548" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/73e78a30/09a0afe3-8d94-4db1-a894-98bf18790a81/.APP.USERS">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="21" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
@@ -1323,73 +1349,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DerbySingleton.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/OrderDAOorm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDAOorm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="37" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="986">
+        <state line="15" column="45" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="57" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+        <state line="45" column="13" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/73e78a30/68a78739-83c6-4d9d-8762-6590c964bf5e/.APP.USERS">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/UserDAOorm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="70" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="986">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="74" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="374">
+        <state line="29" column="69" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="697">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/73e78a30/68a78739-83c6-4d9d-8762-6590c964bf5e/.APP.ORDERS">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Orders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="350" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1275">
+          <folding>
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+        <state line="11" column="22" selection-start="215" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="1088">
           <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
             <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/OrderServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="24" selection-start="1081" selection-end="1247" vertical-scroll-proportion="0.58536583" vertical-offset="311" max-vertical-offset="731">
+        <state line="35" column="16" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.42696628" vertical-offset="341" max-vertical-offset="1173">
           <folding />
         </state>
       </provider>

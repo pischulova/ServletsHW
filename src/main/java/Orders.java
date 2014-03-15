@@ -4,23 +4,23 @@ import javax.persistence.*;
  * Created by Алена on 21.02.14.
  */
 @Entity
-@Table(name = "Order")
-public class Order {
+@Table
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    //    private List<Car> order = new ArrayList<Car>();
+    //    private List<Car> orders = new ArrayList<Car>();
     public String name;
     public String color;
 
     @ManyToOne
-    @JoinColumn(name="UserLogin")
+    @JoinColumn(name="userId")
     private Users users;
 
-    public Order() {
+    public Orders() {
     }
 
-    public Order(String color, String name) {
+    public Orders(String color, String name) {
         this.color = color;
         this.name = name;
     }
@@ -59,11 +59,11 @@ public class Order {
 
 
 //    public void addToOrder (Car car) {
-//        order.add(car);
+//        orders.add(car);
 //    }
 //
 //    public int getSize() {
-//        return order.size();
+//        return orders.size();
 //    }
 
 }

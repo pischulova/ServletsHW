@@ -37,7 +37,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
             if((tmpUser.getPassword()).equals(request.getParameter("password"))) {
                 session= request.getSession(true);
                 session.setAttribute("users", tmpUser);
-                response.sendRedirect("http://localhost:8080/order");
+                response.sendRedirect("http://localhost:8080/orders");
             } else {
                 out.print("Access denied :(");
             }
@@ -47,7 +47,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
             userDAO.addUser(tmpUser);
             session= request.getSession(true);
             session.setAttribute("users", tmpUser);
-            response.sendRedirect("http://localhost:8080/order");
+            response.sendRedirect("http://localhost:8080/orders");
         }
 
         out.print("</body></html>");

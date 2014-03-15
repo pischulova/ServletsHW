@@ -8,11 +8,14 @@ import java.util.Collection;
 @Table
 public class Users {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int userId;
+
     private String login;
     private String password;
 
     @OneToMany(mappedBy="users")
-    private Collection <Order> orders;
+    private Collection <Orders> ordersList;
 
     public Users(String login, String password) {
         this.login = login;
@@ -38,21 +41,29 @@ public class Users {
         this.password = password;
     }
 
-    public Collection<Order> getOrders() {
-        return orders;
+    public Collection<Orders> getOrdersList() {
+        return ordersList;
     }
 
-    public void setOrders(Collection<Order> orders) {
-        this.orders = orders;
+    public void setOrdersList(Collection<Orders> orders) {
+        this.ordersList = orders;
     }
 
-    public void addToOrder (Order order) {
-        orders.add(order);
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public void addToOrder (Orders orders) {
+        this.ordersList.add(orders);
     }
 
     public String getOrdersForWeb() {
         String s="";
-        for(Order o: orders) {
+        for(Orders o: ordersList) {
             s += "<tr><td>"+ o.getId() +" </td><td>"+ o.getName() +" </td><td>"+ o.getColor()+" </td></tr></br>";
         }
         return s;

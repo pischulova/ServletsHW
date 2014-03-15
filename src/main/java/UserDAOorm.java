@@ -26,7 +26,7 @@ public class UserDAOorm implements UserDAO{
 
     @Override
     public Users findUser(String login) {
-        Users u = new Users();
+        Users u = null;
         try{
             Query query = em.createQuery("SELECT c FROM Users c WHERE login='"+login+"'");
         u = (Users)query.getSingleResult();}

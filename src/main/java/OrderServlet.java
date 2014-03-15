@@ -11,12 +11,12 @@ import java.util.Collection;
  */
 public class OrderServlet extends javax.servlet.http.HttpServlet {
     Users users;
-    Order order;
+    Orders orders;
     OrderDAO orderDAO = DAOFactory.getDAOFactory(1).getOrderDAO();
 
     @Override
     public void init() throws ServletException {
-        order = new Order();
+        orders = new Orders();
 
     }
 
@@ -32,28 +32,26 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
             String name = request.getParameter("name");
             String col = request.getParameter("color");
             if(name!=null && col!=null) {
-                if(order==null) {
-                    order = new Order();
-                    orderDAO.addOrder(new Order(name, col));
-                    users.addToOrder(order);
-                } else {
-                    orderDAO.addOrder(new Order(name, col));
-                    users.addToOrder(order);
-                }
+                orders = new Orders(name, col);
+                users.addToOrder(orders);
+                orders.setUsers(users);
+                orderDAO.addOrder(orders);
+
             }
 
             out.print("<H2>Your previous orders:</H2>");
 
-            Collection<Order> orders = users.getOrders();
-            if(orders==null) {
+            Collection<Orders> ordersList = users.getOrdersList();
+            if(ordersList==null) {
                 out.print("You have not made any orders yet.");
             } else {
-                out.print(users.getOrdersForWeb());
+                out.print("<table>"+users.getOrdersForWeb()+"</table>");
             }
 
             session.setAttribute("users", users);
-            out.print("<H2>Make a new order</H2>");
-            out.print("<form action=\"/order\" method=\"GET\"> Choose product:<input type=\"text\" name=\"name\"/><br/> Choose color:<input type=\"text\"" +
+            out.print("<H2>Make new orders</H2>");
+            out.print("<form action=\"/orders\" method=\"GET\"> Choose product:<input type=\"text\" name=\"name\"/><br/> " +
+                    "Choose color:<input type=\"text\"" +
                     "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");
 
             out.print("<form action=\"/index.jsp\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");

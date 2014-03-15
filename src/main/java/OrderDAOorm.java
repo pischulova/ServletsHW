@@ -11,28 +11,28 @@ public class OrderDAOorm implements OrderDAO{
     }
 
     @Override
-    public void addOrder(Order order) {
+    public void addOrder(Orders orders) {
         em.getTransaction().begin();
-        em.persist(order);
+        em.persist(orders);
         em.getTransaction().commit();
     }
 
     @Override
-    public Order findOrder(int id) {
-        return em.find(Order.class, id);
+    public Orders findOrder(int id) {
+        return em.find(Orders.class, id);
     }
 
     @Override
-    public void removeOrder(Order order) {
+    public void removeOrder(Orders orders) {
         em.getTransaction().begin();
-        em.remove(order);
+        em.remove(orders);
         em.getTransaction().commit();
     }
 
     @Override
-    public Order updateOrder(Order order) {
+    public Orders updateOrder(Orders orders) {
         em.getTransaction().begin();
-        em.merge(order);
+        em.merge(orders);
         em.getTransaction().commit();
         return null;
     }
