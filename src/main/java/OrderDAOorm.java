@@ -1,3 +1,5 @@
+import entity.Orders;
+
 import javax.persistence.EntityManager;
 
 /**

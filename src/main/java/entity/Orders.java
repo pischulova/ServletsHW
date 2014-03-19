@@ -1,3 +1,7 @@
+package entity;
+
+import entity.Users;
+
 import javax.persistence.*;
 
 /**

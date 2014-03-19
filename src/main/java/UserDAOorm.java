@@ -1,3 +1,5 @@
+import entity.Users;
+
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;

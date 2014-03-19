@@ -1,3 +1,5 @@
+import entity.Users;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.*;
@@ -6,7 +8,7 @@ import java.io.*;
  * Created by Алена on 21.02.14.
  */
 public class LoginServlet extends javax.servlet.http.HttpServlet {
-    //Set<Users> users = new HashSet<Users>();
+    //Set<entity.Users> users = new HashSet<entity.Users>();
     UserDAO userDAO = DAOFactory.getDAOFactory(1).getUserDAO();
 
     @Override

@@ -1,3 +1,5 @@
+import entity.Users;
+
 /**
  * Created by Алена on 11.03.14.
  */
