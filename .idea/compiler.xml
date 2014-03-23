@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="ServletsHW" />
+        <module name="ServletsShop" />
       </profile>
     </annotationProcessing>
   </component>
