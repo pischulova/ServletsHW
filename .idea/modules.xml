@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ServletsHW.iml" filepath="$PROJECT_DIR$/ServletsHW.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServletsShop.iml" filepath="$PROJECT_DIR$/ServletsShop.iml" />
     </modules>
   </component>
 </project>

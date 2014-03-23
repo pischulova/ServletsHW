@@ -2,10 +2,10 @@
   <artifact type="exploded-war" name="ServletsHW:war exploded">
     <output-path>$PROJECT_DIR$/target/ServletsHW</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="ServletsHW/web/Web" />
+      <element id="javaee-facet-resources" facet="ServletsShop/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ServletsHW" />
+          <element id="module-output" name="ServletsShop" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.3.RELEASE" />

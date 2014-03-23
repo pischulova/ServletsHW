@@ -1,4 +1,4 @@
-import entity.Users;
+import com.myshop.entity.Users;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;

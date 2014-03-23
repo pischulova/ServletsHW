@@ -7,7 +7,7 @@ import java.sql.*;
 public class DerbySingleton {
     private static DerbySingleton ourInstance = new DerbySingleton();
     private static String DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-//    private static final String DB_URL="jdbc:derby:C:\\entity.Users\\Алена\\IdeaProjects\\ServletsHW\\db";
+//    private static final String DB_URL="jdbc:derby:C:\\com.myshop.entity.Users\\Алена\\IdeaProjects\\ServletsHW\\db";
 
     private static final String UNIT_NAME = "Unit";
     private static EntityManagerFactory factory;

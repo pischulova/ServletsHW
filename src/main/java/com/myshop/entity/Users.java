@@ -1,4 +1,4 @@
-package entity;
+package com.myshop.entity;
 
 import javax.persistence.*;
 import java.util.Collection;

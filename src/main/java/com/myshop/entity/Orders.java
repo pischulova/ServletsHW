@@ -1,6 +1,4 @@
-package entity;
-
-import entity.Users;
+package com.myshop.entity;
 
 import javax.persistence.*;
 
@@ -13,7 +11,6 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    //    private List<Car> orders = new ArrayList<Car>();
     public String name;
     public String color;
 
@@ -61,13 +58,5 @@ public class Orders {
         this.users = users;
     }
 
-
-//    public void addToOrder (Car car) {
-//        orders.add(car);
-//    }
-//
-//    public int getSize() {
-//        return orders.size();
-//    }
 
 }

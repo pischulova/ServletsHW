@@ -3,14 +3,14 @@
 
     <!--<persistence-unit name="Unit" transaction-type="RESOURCE_LOCAL">-->
         <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
-        <!--<class>entity.Orders</class>-->
-        <!--<class>entity.Users</class>-->
+        <!--<class>com.myshop.entity.Orders</class>-->
+        <!--<class>com.myshop.entity.Users</class>-->
         <!--<properties>-->
             <!--<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenSevenDialect"/>-->
             <!--<property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
 
             <!--<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>-->
-            <!--<property name="javax.persistence.jdbc.url" value="jdbc:derby:C:/entity.Users/Алена/IdeaProjects/ServletsHW/db"/>-->
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:derby:C:/com.myshop.entity.Users/Алена/IdeaProjects/ServletsHW/db"/>-->
 
         <!--</properties>-->
     <!--</persistence-unit>-->
@@ -19,10 +19,10 @@
         <provider>
             org.eclipse.persistence.jpa.PersistenceProvider
         </provider>
-        <class>entity.Orders</class>
-        <class>entity.Users</class>
+        <class>com.myshop.entity.Orders</class>
+        <class>com.myshop.entity.Users</class>
         <properties>
-            <property name="eclipselink.jdbc.url" value="jdbc:derby:C:/entity.Users/Алена/IdeaProjects/ServletsHW/db"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:derby:C:/com.myshop.entity.Users/Алена/IdeaProjects/ServletsHW/db"/>
             <property name="eclipselink.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
             <property name="eclipselink.jdbc.user" value=""/>
             <property name="eclipselink.jdbc.password" value="update"/>

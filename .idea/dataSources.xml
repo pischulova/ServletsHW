@@ -11,7 +11,7 @@
     <data-source source="LOCAL" name="Unit" uuid="09a0afe3-8d94-4db1-a894-98bf18790a81">
       <driver-ref>derby.embedded</driver-ref>
       <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
-      <jdbc-url>jdbc:derby:C:/entity.Users/Алена/IdeaProjects/ServletsHW/db</jdbc-url>
+      <jdbc-url>jdbc:derby:C:/com.myshop.entity.Users/Алена/IdeaProjects/ServletsHW/db</jdbc-url>
       <user-password>dfdfdfdadfcedfcbdfdedfcf</user-password>
       <libraries>
         <library>

@@ -1,10 +1,10 @@
-package dao;
+package com.myshop.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-import entity.Orders;
+import com.myshop.entity.Orders;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,8 +15,8 @@ public class OrdersDao {
     @PersistenceContext
     private EntityManager em;
 
-    public void saveOrders(Orders orders){
-        em.persist(orders);
+    public void saveOrders(Orders order){
+        em.persist(order);
     }
 
     public Orders findById(int id) {
@@ -25,5 +25,13 @@ public class OrdersDao {
 
     public List<Orders> findAll() {
         return (List<Orders>)em.createQuery("SELECT o from Orders o").getResultList();
+    }
+
+    public void updateOrders(Orders order) {
+        em.merge(order);
+    }
+
+    public void removeOrder(Orders order) {
+        em.remove(order);
     }
 }

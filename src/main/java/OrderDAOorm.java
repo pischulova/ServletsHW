@@ -1,4 +1,4 @@
-import entity.Orders;
+import com.myshop.entity.Orders;
 
 import javax.persistence.EntityManager;
 

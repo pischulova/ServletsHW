@@ -1,5 +1,7 @@
-import entity.Orders;
-import entity.Users;
+package com.myshop.servlet;
+
+import com.myshop.entity.Orders;
+import com.myshop.entity.Users;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +30,7 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
         HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
         if(session.getAttribute("users")!= null) {
-            out.print("<html><head><title>entity.Orders</title></head><body>");
+            out.print("<html><head><title>com.myshop.entity.Orders</title></head><body>");
             users = (Users)session.getAttribute("users");
             out.print("Hello, "+ users.getLogin() + "!</br>");
 
