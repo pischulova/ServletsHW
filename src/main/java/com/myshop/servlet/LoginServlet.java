@@ -1,6 +1,11 @@
 package com.myshop.servlet;
 
 import com.myshop.entity.Users;
+import com.myshop.service.OrdersService;
+import com.myshop.service.UsersService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -9,12 +14,15 @@ import java.io.*;
 /**
  * Created by Алена on 21.02.14.
  */
-public class LoginServlet extends javax.servlet.http.HttpServlet {
-    //Set<com.myshop.entity.Users> users = new HashSet<com.myshop.entity.Users>();
-    UserDAO userDAO = DAOFactory.getDAOFactory(1).getUserDAO();
+@Configuration
+public class LoginServlet extends HttpServlet {
+
+    @Autowired
+    private UsersService usersService;
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void init() throws ServletException {
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
     @Override
@@ -24,7 +32,7 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
         Users tmpUser = null;
         HttpSession session;
 
-        tmpUser = userDAO.findUser(request.getParameter("login"));
+        tmpUser = usersService.findByLogin(request.getParameter("login"));
         if(tmpUser!= null) {
             if((tmpUser.getPassword()).equals(request.getParameter("password"))) {
                 session= request.getSession(true);
@@ -35,14 +43,14 @@ public class LoginServlet extends javax.servlet.http.HttpServlet {
             }
 
         } else {
-            tmpUser = new Users(request.getParameter("login"), request.getParameter("password"));
-            userDAO.addUser(tmpUser);
+            String login = request.getParameter("login");
+            String pass = request.getParameter("password");
+            tmpUser = new Users(login, pass);
+            usersService.saveUsers(login, pass);
             session= request.getSession(true);
             session.setAttribute("users", tmpUser);
             response.sendRedirect("http://localhost:8080/orders");
         }
-
         out.print("</body></html>");
     }
-
 }

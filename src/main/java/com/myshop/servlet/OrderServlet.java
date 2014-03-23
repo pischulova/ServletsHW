@@ -2,11 +2,13 @@ package com.myshop.servlet;
 
 import com.myshop.entity.Orders;
 import com.myshop.entity.Users;
+import com.myshop.service.OrdersService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
@@ -14,15 +16,18 @@ import java.util.Collection;
 /**
  * Created by Алена on 21.02.14.
  */
-public class OrderServlet extends javax.servlet.http.HttpServlet {
-    Users users;
-    Orders orders;
-    OrderDAO orderDAO = DAOFactory.getDAOFactory(1).getOrderDAO();
+@Configuration
+public class OrderServlet extends HttpServlet {
+    @Autowired
+    private OrdersService ordersService;
+
+    Users users=null;
+    Orders orders=null;
 
     @Override
     public void init() throws ServletException {
-        orders = new Orders();
-
+        //orders = new Orders();
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
     @Override
@@ -40,7 +45,7 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
                 orders = new Orders(name, col);
                 users.addToOrder(orders);
                 orders.setUsers(users);
-                orderDAO.addOrder(orders);
+                ordersService.saveOrders(name, col);
             }
 
             out.print("<H2>Your previous orders:</H2>");
@@ -67,8 +72,4 @@ public class OrderServlet extends javax.servlet.http.HttpServlet {
         out.print("</body></html>");
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }
