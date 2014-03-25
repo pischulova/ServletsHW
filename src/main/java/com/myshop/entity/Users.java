@@ -69,7 +69,7 @@ public class Users {
     public String getOrdersForWeb() {
         String s="";
         for(Orders o: ordersList) {
-            s += "<tr><td>"+ o.getId() +" </td><td>"+ o.getName() +" </td><td>"+ o.getColor()+" </td></tr></br>";
+            s += "<tr><td>"+ o.getId() +" </td><td>"+ o.getName() +" </td><td>"+ o.getColor()+" </td></tr>";
         }
         return s;
     }

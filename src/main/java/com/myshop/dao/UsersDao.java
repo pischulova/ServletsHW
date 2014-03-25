@@ -3,6 +3,7 @@ import com.myshop.entity.Users;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -23,7 +24,11 @@ public class UsersDao {
     }
 
     public Users findByLogin(String login) {
-        return (Users)em.createQuery("SELECT u FROM Users u WHERE u.login=:l").setParameter("l", login).getSingleResult();
+        try {
+            return (Users)em.createQuery("SELECT u FROM Users u WHERE u.login=:l").setParameter("l", login).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
     }
 
     public List<Users> findAll() {
