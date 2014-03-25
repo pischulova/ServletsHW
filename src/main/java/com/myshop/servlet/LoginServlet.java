@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
             String login = request.getParameter("login");
             String pass = request.getParameter("password");
             tmpUser = new Users(login, pass);
-            usersService.saveUsers(login, pass);
+            usersService.saveUsers(tmpUser);
             session= request.getSession(true);
             session.setAttribute("users", tmpUser);
             response.sendRedirect("http://localhost:8080/orders");

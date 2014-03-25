@@ -18,10 +18,7 @@ public class OrdersService {
 
 
     @Transactional
-    public void saveOrders(String name, String color){
-        Orders orders = new Orders();
-        orders.setName(name);
-        orders.setColor(color);
+    public void saveOrders(Orders orders){
         ordersDao.saveOrders(orders);
     }
 

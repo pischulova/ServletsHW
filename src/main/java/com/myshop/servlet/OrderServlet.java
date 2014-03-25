@@ -3,6 +3,8 @@ package com.myshop.servlet;
 import com.myshop.entity.Orders;
 import com.myshop.entity.Users;
 import com.myshop.service.OrdersService;
+import com.myshop.service.UsersService;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -20,6 +22,8 @@ import java.util.Collection;
 public class OrderServlet extends HttpServlet {
     @Autowired
     private OrdersService ordersService;
+    @Autowired
+    private UsersService usersService;
 
     Users users=null;
     Orders orders=null;
@@ -45,12 +49,15 @@ public class OrderServlet extends HttpServlet {
                 orders = new Orders(name, col);
                 users.addToOrder(orders);
                 orders.setUsers(users);
-                ordersService.saveOrders(name, col);
+                usersService.updateUsers(users);
+                ordersService.saveOrders(orders);
+
             }
 
             out.print("<H2>Your previous orders:</H2>");
 
             Collection<Orders> ordersList = users.getOrdersList();
+
             if(ordersList.size()==0) {
                 out.print("You have not made any orders yet.");
             } else {
@@ -63,7 +70,7 @@ public class OrderServlet extends HttpServlet {
                     "Choose color:<input type=\"text\"" +
                     "name=\"color\"/><br/> <input type=\"submit\" name=\"Buy\" value=\"Buy!\"><br/></form>");
 
-            out.print("<form action=\"/index.jsp\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");
+            out.print("<form action=\"/index.html\" method=\"POST\"><input type=\"submit\" name=\"logout\" value=\"Log out\"><br/></form>");
             session.setAttribute("user", users);
         } else {
             out.print("Access denied. You have to log in first");

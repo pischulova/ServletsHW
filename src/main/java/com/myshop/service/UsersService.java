@@ -20,10 +20,7 @@ public class UsersService {
 
 
     @Transactional
-    public void saveUsers(String login, String password){
-        Users user = new Users();
-        user.setLogin(login);
-        user.setPassword(password);
+    public void saveUsers(Users user){
         usersDao.saveUsers(user);
     }
 

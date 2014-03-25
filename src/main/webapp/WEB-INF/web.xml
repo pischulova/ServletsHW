@@ -17,10 +17,12 @@
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
 
+
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.myshop.servlet.LoginServlet</servlet-class>
     </servlet>
+
     <servlet>
         <servlet-name>OrderServlet</servlet-name>
         <servlet-class>com.myshop.servlet.OrderServlet</servlet-class>

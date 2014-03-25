@@ -1,7 +1,9 @@
 package com.myshop.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by Алена on 21.02.14.
@@ -13,11 +15,12 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
+    @Column(unique = true)
     private String login;
     private String password;
 
-    @OneToMany(mappedBy="users")
-    private Collection <Orders> ordersList;
+    @OneToMany(mappedBy="users", fetch = FetchType.EAGER)
+    private Collection <Orders> ordersList= new ArrayList<Orders>();
 
     public Users(String login, String password) {
         this.login = login;
